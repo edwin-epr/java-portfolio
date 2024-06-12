@@ -34,7 +34,6 @@ public class ChatServer {
                 ClientHandler clientHandler = new ClientHandler(clientSocket);
                 clients.add(clientHandler);
                 LOG.log(Level.INFO, "Se ha agregado un cliente a la lista de clientes: " + clients);
-//                new Thread(clientHandler).start(); //TODO: convertir en executor, es mejor tener un pool administrado y limitado.
                 messageExecutor.submit(clientHandler);
                 LOG.info("Se ha iniciado un nuevo hilo para un cliente");
             }

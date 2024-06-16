@@ -4,6 +4,7 @@ import com.mathedwin.main.exceptions.DatabaseException;
 import com.mathedwin.main.model.User;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,7 +16,7 @@ public class RegistrationService {
         this.userService = new UserService();
     }
 
-    public boolean register(User user) throws Exception {
+    public boolean register(User user) throws ExecutionException, InterruptedException {
 
         CompletableFuture<Boolean> future = new CompletableFuture<>();
 

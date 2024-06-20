@@ -39,7 +39,6 @@ public class MessageService implements IMessageService {
             statement.setInt(1, message.getUserId());
             statement.setString(2, message.getContent());
             statement.executeUpdate();
-            LOG.log(Level.INFO, "Se ha guardado un mensaje en la bd: " + message);
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
                     message.setId(generatedKeys.getInt(1));
@@ -47,6 +46,8 @@ public class MessageService implements IMessageService {
                     throw new DatabaseException("Error al guardar el mensaje");
                 }
             }
+            Message savedMessage = getMessageById(message.getId()).orElseThrow();
+            LOG.log(Level.INFO, "Se ha guardado un mensaje en la bd: " + savedMessage);
 
         } catch (SQLException e) {
             LOG.log(Level.SEVERE, "Error guardando el mensaje: " + message, e);

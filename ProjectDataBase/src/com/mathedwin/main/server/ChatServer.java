@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -58,6 +59,17 @@ public class ChatServer {
             for (ClientHandler client : clients) {
                 if (client != sender) {
                     client.sendMessage(message);
+                }
+            }
+        }
+    }
+
+    public static void broadcastToUser(ClientHandler sender) {
+        synchronized (clients) {
+            for (ClientHandler client : clients) {
+                if (client == sender) {
+                    List<Message> lastMessages = messageService.getLastMessages();
+                    lastMessages.forEach(message -> client.sendMessage(message.getContent()));
                 }
             }
         }

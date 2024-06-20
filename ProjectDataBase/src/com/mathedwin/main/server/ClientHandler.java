@@ -4,12 +4,14 @@ import com.mathedwin.main.model.Message;
 import com.mathedwin.main.model.User;
 import com.mathedwin.main.service.LoginService;
 import com.mathedwin.main.service.RegistrationService;
+import com.mathedwin.main.service.UserService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -59,15 +61,12 @@ public class ClientHandler implements Runnable {
                     check = login.checkUser(username, password);
 
                     if (check) {
-                        LOG.info("Usurario logeado");
-
                         LOG.info("Ha ingresado " + username + " al servidor");
-                        //TODO: aquí deberíamos hacer un broadcast del historial de chat en caso de haberlo.
-                        //TODO: ese concern le corresponde al server, ergo, el server debería tener un método tipo "broadcastToUser"
-                        //TODO: dicho método recibe "this" y usa el método sendMessage para imprimir al usuario los últimos X mensajes.
+                        Optional<User> user = new UserService().getUserByUsername(username);
 
                         String connectionMessage = String.format("[SERVER]: %s ha ingresado al servidor", username);
                         ChatServer.broadcastMessage(connectionMessage, this);
+                        ChatServer.broadcastToUser(this);
 
                         String message;
 
@@ -75,13 +74,10 @@ public class ClientHandler implements Runnable {
                             if (message.equalsIgnoreCase(EXIT_WORD)) {
                                 break;
                             }
-//                message = String.format("[%s]: " + message, username);
+//                            message = String.format("[%s]: " + message, username);
                             message = String.format("[%s]: %s", username, message);
                             ChatServer.broadcastMessage(message, this);
-                            //TODO: tal vez es buen momento para almacenar en la base de datos el mensaje.
-                            //TODO: esto es temporal (la creación de usuario), deberíamos obtener eso de BD al momento del login o registro
-                            // TODO: También cuidado con el user_id, la función que he generado es dummy
-                            Message messageToBeSaved = getMessage(message);
+                            Message messageToBeSaved = getMessage(message, user.orElseThrow());
                             ChatServer.saveMessage(messageToBeSaved);
                         }
                     } else {
@@ -108,6 +104,7 @@ public class ClientHandler implements Runnable {
                     user.setEmail(in.readLine());
                     clearScreen();
                     flag = registrationService.register(user);
+                    // TODO: Cachar validateUserException
 
                     if (flag) {
                         LOG.info("Usuario registrado con exito!");
@@ -147,18 +144,18 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    private Message getMessage(String message) {
-        final int dummyUserId = 1; //TODO: temporal, remover y ajustar, de momento todos los mensajes serán del user con id 1 -> user1
+    private Message getMessage(String message, User user) {
+        final int userId = user.getId(); //TODO: temporal, remover y ajustar, de momento todos los mensajes serán del user con id 1 -> user1
         Message messageToBeSaved = new Message();
         messageToBeSaved.setContent(message);
-        messageToBeSaved.setUserId(dummyUserId); //TODO: recordar que no hay correspondencia entre el userId y algún usuario real en la bd, esto sólo es para probar el guardado de mensajes.
+        messageToBeSaved.setUserId(userId); //TODO: recordar que no hay correspondencia entre el userId y algún usuario real en la bd, esto sólo es para probar el guardado de mensajes.
         return messageToBeSaved;
     }
 
 
     private void welcome() throws IOException {
         clearScreen();
-        out.println(ServerConstants.BANNER);
+        out.println(ServerConstants.MYBANNER);
         out.print("¡Bienvnid@!, recuerda ser amigable y respetuoso!, presiona ENTER para continuar...");
         out.flush();
         in.readLine();
@@ -184,7 +181,11 @@ public class ClientHandler implements Runnable {
             out.println("3) Salir del servidor");
             out.print("Seleccione una opción: ");
             out.flush();
-            option = Integer.parseInt(in.readLine());
+            try {
+                option = Integer.parseInt(in.readLine());
+            } catch (RuntimeException e) {
+                option = 0;
+            }
             clearScreen();
             if (option == 1 || option == 2 || option == 3) {
                 return option;

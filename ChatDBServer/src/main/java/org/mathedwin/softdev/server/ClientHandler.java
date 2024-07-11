@@ -16,6 +16,8 @@ import java.net.Socket;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
+import static org.mathedwin.softdev.server.PromptServer.*;
+
 public class ClientHandler implements Runnable {
 
     public static final Logger LOGGER = LogManager.getLogger(ClientHandler.class);
@@ -23,10 +25,8 @@ public class ClientHandler implements Runnable {
     private PrintWriter out;
     private BufferedReader in;
     private String username;
-    private String password;
-    private Boolean check = false;
-    private Integer optionScreen;
-    private static final String CLEAR_CHARACTER = "\033[H\033[2J";
+    private Boolean isUserRegistered = false;
+//    private static final String CLEAR_CHARACTER = "\033[H\033[2J";
     private final LoginService login;
     private final RegistrationService registrationService;
 
@@ -45,22 +45,23 @@ public class ClientHandler implements Runnable {
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-            welcome();
-            //TODO: tal vez aquí podríamos hacer el login/registro
-            while (true) {
-                optionScreen = startScreen();
+            welcome(out, in);
+            int optionScreen;
+            do {
+                optionScreen = startScreen(out, in);
+                // Login
                 if (optionScreen == 1) {
-                    out.print("Escribe tu nombre de usuario: ");
+                    out.print("Enter your username: ");
                     out.flush();
                     username = in.readLine();
-                    clearScreen();
-                    out.print("Escribe tu password: ");
+                    clearScreen(out);
+                    out.print("Enter your password: ");
                     out.flush();
-                    password = in.readLine();
-                    clearScreen();
-                    check = login.checkUser(username, password);
+                    String password = in.readLine();
+                    clearScreen(out);
+                    isUserRegistered = login.checkUser(username, password);
 
-                    if (check) {
+                    if (isUserRegistered) {
                         LOGGER.info("Has entered {} to the server.", username);
                         Optional<User> user = new UserService().getUserByUsername(username);
 
@@ -69,57 +70,57 @@ public class ClientHandler implements Runnable {
                         ChatServer.broadcastToUser(this);
 
                         String message;
+                        out.print("[You]: ");
+                        out.flush();
 
                         while ((message = in.readLine()) != null) {
                             if (message.equalsIgnoreCase(EXIT_WORD)) {
                                 break;
                             }
-//                            message = String.format("[%s]: " + message, username);
                             message = String.format("[%s]: %s", username, message);
                             ChatServer.broadcastMessage(message, this);
                             Message messageToBeSaved = getMessage(message, user.orElseThrow());
                             ChatServer.saveMessage(messageToBeSaved);
+                            out.print("[You]: ");
+                            out.flush();
                         }
                     } else {
                         LOGGER.info("Incorrect username or password.");
                         out.println("Incorrect username or password.");
-                        out.print("Presione ENTER para continuar...");
+                        out.print("Press ENTER to continue...");
                         out.flush();
                         in.readLine();
                     }
                 }
+                // Registration
                 if (optionScreen == 2) {
                     User user = new User();
-                    boolean flag;
-                    out.print("Escribe tu nombre de usuario: ");
+                    boolean isSuccessfulRegistration;
+                    out.print("Enter your username: ");
                     out.flush();
                     user.setUsername(in.readLine());
-                    clearScreen();
-                    out.print("Escribe tu password: ");
+                    clearScreen(out);
+                    out.print("Enter your password: ");
                     out.flush();
                     user.setPassword(in.readLine());
-                    clearScreen();
-                    out.print("Escribe tu email: ");
+                    clearScreen(out);
+                    out.print("Enter your email: ");
                     out.flush();
                     user.setEmail(in.readLine());
-                    clearScreen();
-                    flag = registrationService.register(user);
-                    // TODO: Cachar validateUserException
+                    clearScreen(out);
+                    isSuccessfulRegistration = registrationService.register(user);
 
-                    if (flag) {
+                    if (isSuccessfulRegistration) {
                         LOGGER.info("User successfully registered!");
                     } else {
                         LOGGER.info("User name or email already registered.");
                         out.println("User name or email already registered.");
-                        out.print("Presione ENTER para continuar...");
+                        out.print("Press ENTER to continue...");
                         out.flush();
                         in.readLine();
                     }
                 }
-                if (optionScreen == 3) {
-                    break;
-                }
-            }
+            } while (optionScreen != 3);
 
 
         } catch (IOException | InterruptedException | ExecutionException exception) {
@@ -135,7 +136,7 @@ public class ClientHandler implements Runnable {
             }
 
             ChatServer.removeClient(this);
-            if (check) {
+            if (isUserRegistered) {
                 LOGGER.info("{} has been disconnected.", username);
                 ChatServer.broadcastMessage(username + " has been disconnected from the chat.", this);
             } else {
@@ -145,25 +146,11 @@ public class ClientHandler implements Runnable {
     }
 
     private Message getMessage(String message, User user) {
-        final int userId = user.getId(); //TODO: temporal, remover y ajustar, de momento todos los mensajes serán del user con id 1 -> user1
+        final int userId = user.getId();
         Message messageToBeSaved = new Message();
         messageToBeSaved.setContent(message);
-        messageToBeSaved.setUserId(userId); //TODO: recordar que no hay correspondencia entre el userId y algún usuario real en la bd, esto sólo es para probar el guardado de mensajes.
+        messageToBeSaved.setUserId(userId);
         return messageToBeSaved;
-    }
-
-    private void welcome() throws IOException {
-        clearScreen();
-        out.println(ServerConstants.MYBANNER);
-        out.print("¡Bienvnid@!, recuerda ser amigable y respetuoso!, presiona ENTER para continuar...");
-        out.flush();
-        in.readLine();
-        clearScreen();
-    }
-
-    private void clearScreen() {
-        out.print(CLEAR_CHARACTER);
-        out.flush();
     }
 
     public void sendMessage(String message) {
@@ -171,30 +158,4 @@ public class ClientHandler implements Runnable {
         out.flush();
     }
 
-    private int startScreen () throws IOException {
-        int option;
-        while (true) {
-            clearScreen();
-            out.println("1) Iniciar Sesión");
-            out.println("2) Registrar Usuario");
-            out.println("3) Salir del servidor");
-            out.print("Seleccione una opción: ");
-            out.flush();
-            try {
-                option = Integer.parseInt(in.readLine());
-            } catch (RuntimeException e) {
-                option = 0;
-            }
-            clearScreen();
-            if (option == 1 || option == 2 || option == 3) {
-                return option;
-            } else {
-                out.println("Opción incorrecta, vuelva a escoger");
-                out.print("Presione ENTER para continuar...");
-                out.flush();
-                in.readLine();
-                clearScreen();
-            }
-        }
-    }
 }

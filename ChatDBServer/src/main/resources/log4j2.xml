@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Configuration status="error">
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+<!--            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level - %logger{36} - %msg%n"/>-->
+            <PatternLayout pattern="%d{DEFAULT} %p %C: %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFileAppender" fileName="logs/chatdbserver.log" filePattern="logs/chatdbserver.%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{DEFAULT} %p %C: %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="logs" maxDepth="1">
+                    <IfFileName glob="chatdbserver.*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Root>
+        <Logger name="org.mathedwin.softdev.database.DBConfig" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.database.DBConnection" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.server.ChatServer" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.server.ClientHandler" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.service.LoginService" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.service.MessageService" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.service.RegistrationService" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+        <Logger name="org.mathedwin.softdev.service.UserService" level="info">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>

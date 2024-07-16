@@ -18,7 +18,6 @@ public class DBConnection implements IDBConnection {
         String USER = CONFIG.getUSER();
         String PASSWORD = CONFIG.getPASSWORD();
 
-        LOGGER.info("Configuration successfully loaded!");
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }

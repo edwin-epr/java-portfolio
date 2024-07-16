@@ -16,9 +16,9 @@ public class LoginService {
     }
 
     public Boolean checkUser(String username, String password) {
-        LOGGER.info("checking if the user '{}' is registered", username);
         Optional<User> userToGetAccess = userService.getUserByUsername(username);
         if (userToGetAccess.isPresent()) {
+            LOGGER.debug("checking if the user '{}' is registered", username);
             String registeredUser = userToGetAccess.get().getUsername();
             String registeredPassword = userToGetAccess.get().getPassword();
             return registeredUser.equals(username) && registeredPassword.equals(password);

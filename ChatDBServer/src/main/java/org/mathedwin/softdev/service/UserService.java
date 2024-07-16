@@ -111,8 +111,13 @@ public class UserService implements IUserService {
     }
 
     public void saveUser(User user) {
-
-        validateUser(user);
+        try {
+            validateUser(user);
+        } catch (IllegalArgumentException exception) {
+            String messageError = String.format("Error validating user: %s", user);
+            LOGGER.error(messageError, exception);
+            throw new DatabaseException(messageError, exception);
+        }
 
         try (Connection connection = dbConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(SAVE_USER_QUERY, Statement.RETURN_GENERATED_KEYS)) {

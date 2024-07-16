@@ -31,5 +31,6 @@ public class DBConfig {
         } catch (IOException exception) {
             LOGGER.error("Error loading properties.", exception);
         }
+        LOGGER.info("Properties successfully loaded!");
     }
 }

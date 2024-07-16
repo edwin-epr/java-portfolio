@@ -1,0 +1,112 @@
+2024-07-15 17:45:53,990 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-15 17:46:01,550 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-15 17:46:01,559 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-15 17:46:01,560 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-15 17:46:09,455 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-15 17:46:09,727 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user7 to the server.
+2024-07-15 17:46:09,727 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-15 17:46:09,750 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-15 17:46:49,645 INFO org.mathedwin.softdev.server.ClientHandler: user7 has been disconnected.
+2024-07-15 17:50:57,477 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-15 17:51:01,514 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-15 17:51:01,524 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-15 17:51:01,525 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-15 17:51:20,760 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-15 17:51:21,092 INFO org.mathedwin.softdev.service.RegistrationService: A user has registered: User(id=11, username=userU, password=passoweru, email=edw.skd@jff.com).
+2024-07-15 17:51:21,092 INFO org.mathedwin.softdev.server.ClientHandler: User successfully registered!
+2024-07-15 17:55:42,642 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-15 17:55:49,471 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-15 17:55:49,503 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-15 17:55:49,505 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-15 17:56:07,564 ERROR org.mathedwin.softdev.service.UserService: Error validating user: User(id=0, username=user5, password=paskufe, email=esdjf.s@fds.com)
+java.lang.IllegalArgumentException: The password must contain at least one number.
+	at org.mathedwin.softdev.utils.UserUtils.validatePassword(UserUtils.java:65) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:24) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2024-07-15 17:56:07,578 ERROR org.mathedwin.softdev.service.RegistrationService: Error registering user: User(id=0, username=user5, password=paskufe, email=esdjf.s@fds.com).
+org.mathedwin.softdev.exceptions.DatabaseException: Error validating user: User(id=0, username=user5, password=paskufe, email=esdjf.s@fds.com)
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:119) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.IllegalArgumentException: The password must contain at least one number.
+	at org.mathedwin.softdev.utils.UserUtils.validatePassword(UserUtils.java:65) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:24) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	... 7 more
+2024-07-15 17:56:07,579 INFO org.mathedwin.softdev.server.ClientHandler: User name or email already registered.
+2024-07-15 18:01:59,324 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-15 18:01:59,627 INFO org.mathedwin.softdev.service.RegistrationService: A user has registered: User(id=12, username=usdrt, password=pasdf22, email=ess@sdf.com).
+2024-07-15 18:01:59,627 INFO org.mathedwin.softdev.server.ClientHandler: User successfully registered!
+2024-07-15 18:02:26,549 ERROR org.mathedwin.softdev.service.UserService: Error validating user: User(id=0, username=, password=pasw2, email=ed@qw.com)
+java.lang.IllegalArgumentException: The username cannot be null or empty.
+	at org.mathedwin.softdev.utils.UserUtils.validateUsername(UserUtils.java:37) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:22) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2024-07-15 18:02:26,551 ERROR org.mathedwin.softdev.service.RegistrationService: Error registering user: User(id=0, username=, password=pasw2, email=ed@qw.com).
+org.mathedwin.softdev.exceptions.DatabaseException: Error validating user: User(id=0, username=, password=pasw2, email=ed@qw.com)
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:119) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.IllegalArgumentException: The username cannot be null or empty.
+	at org.mathedwin.softdev.utils.UserUtils.validateUsername(UserUtils.java:37) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:22) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	... 7 more
+2024-07-15 18:02:26,553 INFO org.mathedwin.softdev.server.ClientHandler: User name or email already registered.
+2024-07-15 18:02:32,010 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-15 18:04:22,074 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-15 18:04:22,074 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-15 18:04:22,075 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-15 18:04:40,774 ERROR org.mathedwin.softdev.service.UserService: Error validating user: User(id=0, username=ueis, password=ps, email=dw@lsdj.com)
+java.lang.IllegalArgumentException: The password must be longer than six characters.
+	at org.mathedwin.softdev.utils.UserUtils.validatePassword(UserUtils.java:53) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:24) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2024-07-15 18:04:40,777 ERROR org.mathedwin.softdev.service.RegistrationService: Error registering user: User(id=0, username=ueis, password=ps, email=dw@lsdj.com).
+org.mathedwin.softdev.exceptions.DatabaseException: Error validating user: User(id=0, username=ueis, password=ps, email=dw@lsdj.com)
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:119) ~[classes/:?]
+	at org.mathedwin.softdev.service.RegistrationService.register(RegistrationService.java:25) ~[classes/:?]
+	at org.mathedwin.softdev.server.ClientHandler.run(ClientHandler.java:107) ~[classes/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.IllegalArgumentException: The password must be longer than six characters.
+	at org.mathedwin.softdev.utils.UserUtils.validatePassword(UserUtils.java:53) ~[classes/:?]
+	at org.mathedwin.softdev.utils.UserUtils.validateUser(UserUtils.java:24) ~[classes/:?]
+	at org.mathedwin.softdev.service.UserService.saveUser(UserService.java:115) ~[classes/:?]
+	... 7 more
+2024-07-15 18:04:40,779 INFO org.mathedwin.softdev.server.ClientHandler: User name or email already registered.
+2024-07-15 18:04:44,047 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.

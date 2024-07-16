@@ -8,11 +8,9 @@ import org.mathedwin.softdev.service.LoginService;
 import org.mathedwin.softdev.service.RegistrationService;
 import org.mathedwin.softdev.service.UserService;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
@@ -24,9 +22,10 @@ public class ClientHandler implements Runnable {
     private final Socket clientSocket;
     private PrintWriter out;
     private BufferedReader in;
+    private Console console;
     private String username;
     private Boolean isUserRegistered = false;
-//    private static final String CLEAR_CHARACTER = "\033[H\033[2J";
+    //    private static final String CLEAR_CHARACTER = "\033[H\033[2J";
     private final LoginService login;
     private final RegistrationService registrationService;
 
@@ -44,6 +43,7 @@ public class ClientHandler implements Runnable {
 
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            console = System.console();
 
             welcome(out, in);
             int optionScreen;
@@ -70,8 +70,6 @@ public class ClientHandler implements Runnable {
                         ChatServer.broadcastToUser(this);
 
                         String message;
-                        out.print("[You]: ");
-                        out.flush();
 
                         while ((message = in.readLine()) != null) {
                             if (message.equalsIgnoreCase(EXIT_WORD)) {
@@ -81,8 +79,6 @@ public class ClientHandler implements Runnable {
                             ChatServer.broadcastMessage(message, this);
                             Message messageToBeSaved = getMessage(message, user.orElseThrow());
                             ChatServer.saveMessage(messageToBeSaved);
-                            out.print("[You]: ");
-                            out.flush();
                         }
                     } else {
                         LOGGER.info("Incorrect username or password.");

@@ -21,7 +21,7 @@ public class UserUtils {
 
         validateUsername(user.getUsername());
         validateEmail(user.getEmail());
-        validatePassword(user.getPassword());
+        validatePasswordForRegister(user.getPassword());
 
     }
 
@@ -44,7 +44,17 @@ public class UserUtils {
         }
     }
 
-    public static void validatePassword(String password) {
+    public static void validatePasswordForLogin(String password) {
+        if (isNull(password) || password.isEmpty()) {
+            throw new IllegalArgumentException("The password cannot be null or empty.");
+        }
+
+        if (password.length() <= 6) {
+            throw new IllegalArgumentException("The password must be longer than six characters.");
+        }
+    }
+
+    public static void validatePasswordForRegister(String password) {
         if (isNull(password) || password.isEmpty()) {
             throw new IllegalArgumentException("The password cannot be null or empty.");
         }

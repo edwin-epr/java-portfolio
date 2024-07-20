@@ -81,7 +81,7 @@ public class UserService implements IUserService {
                 return Optional.of(mapResultSetToUser(resultSet));
             }
         } catch (SQLException exception) {
-            String messageError = String.format("Error retrieving user with username: %s", username);
+            String messageError = String.format("Error retrieving user with username: %s.", username);
             LOGGER.error(messageError, exception);
             throw new DatabaseException(messageError, exception);
         }

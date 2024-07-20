@@ -1,0 +1,213 @@
+2024-07-19 22:01:03,527 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:01:12,896 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:01:12,915 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@2c1b194a].
+2024-07-19 22:01:12,916 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:01:12,922 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:01:27,711 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:01:27,712 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@26e356f0].
+2024-07-19 22:01:27,713 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:01:27,714 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:02:03,842 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:02:03,842 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@4b8ee4de].
+2024-07-19 22:02:03,843 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:02:03,843 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:03:25,790 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:03:29,348 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:03:29,357 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 22:03:29,358 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:03:29,362 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:06:31,876 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:06:37,062 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:06:37,071 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 22:06:37,072 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:06:46,247 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:07:26,706 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:07:33,010 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:07:33,018 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 22:07:33,019 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:07:49,633 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 22:07:49,966 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 22:08:01,011 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:08:49,515 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:08:53,684 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:08:53,694 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 22:08:53,695 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:09:02,535 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 22:09:02,833 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 22:09:06,175 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:31:16,060 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:31:19,844 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:31:19,852 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@3ee37e5a].
+2024-07-19 22:31:19,853 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:31:33,122 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 22:31:33,408 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 22:31:47,772 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:32:53,828 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:32:59,957 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:32:59,971 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@3ee37e5a].
+2024-07-19 22:32:59,972 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:33:14,366 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 22:33:14,624 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 22:34:11,298 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 22:34:45,089 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 22:34:51,004 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 22:34:51,012 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@3ee37e5a].
+2024-07-19 22:34:51,012 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 22:34:59,955 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 22:35:00,242 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 23:19:08,578 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:19:28,828 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:19:28,859 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:19:28,861 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:19:43,255 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 23:19:55,856 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:19:55,857 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-19 23:19:55,857 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:20:00,367 INFO org.mathedwin.softdev.service.LoginService: The username cannot be null or empty.
+2024-07-19 23:20:29,449 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 23:20:57,730 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:20:57,731 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@437da279].
+2024-07-19 23:20:57,733 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:21:14,005 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 23:22:13,602 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:22:16,368 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:22:16,382 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:22:16,383 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:22:28,260 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:22:28,591 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 23:22:37,395 INFO org.mathedwin.softdev.service.LoginService: The username cannot be null or empty.
+2024-07-19 23:22:57,242 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:22:57,265 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user1 to the server.
+2024-07-19 23:22:57,266 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:22:57,278 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:23:06,423 INFO org.mathedwin.softdev.server.ClientHandler: user1 has been disconnected.
+2024-07-19 23:36:27,254 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:36:30,622 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:36:30,632 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:36:30,634 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:36:40,219 INFO org.mathedwin.softdev.service.LoginService: The password must be longer than six characters.
+2024-07-19 23:36:47,904 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:36:48,214 INFO org.mathedwin.softdev.server.ClientHandler: Incorrect username or password.
+2024-07-19 23:37:02,314 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:37:02,367 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user2 to the server.
+2024-07-19 23:37:02,368 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:37:02,385 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:37:07,261 INFO org.mathedwin.softdev.server.ClientHandler: user2 has been disconnected.
+2024-07-19 23:43:20,615 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:43:28,613 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:43:28,644 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:43:28,645 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:43:37,296 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:37,607 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user2 to the server.
+2024-07-19 23:43:37,607 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:37,626 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:44,035 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:44,089 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:44,110 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=41, userId=2, content=[user2]: mando esto, timestamp=2024-07-19 23:43:44.0).
+2024-07-19 23:43:45,496 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:45,551 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:45,570 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=42, userId=2, content=[user2]: , timestamp=2024-07-19 23:43:45.0).
+2024-07-19 23:43:55,684 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:55,736 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:43:55,763 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=43, userId=2, content=[user2]: y esto otro, timestamp=2024-07-19 23:43:55.0).
+2024-07-19 23:44:01,253 INFO org.mathedwin.softdev.server.ClientHandler: user2 has been disconnected.
+2024-07-19 23:44:03,279 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:44:03,280 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-19 23:44:03,281 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:44:30,222 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:44:30,237 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user3 to the server.
+2024-07-19 23:44:30,237 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:44:30,250 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:44:39,918 INFO org.mathedwin.softdev.server.ClientHandler: user3 has been disconnected.
+2024-07-19 23:46:32,712 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:46:42,064 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:46:42,094 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:46:42,096 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:46:56,582 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:46:56,886 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user4 to the server.
+2024-07-19 23:46:56,887 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:46:56,905 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:05,790 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:05,817 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:05,832 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=44, userId=4, content=[user4]: , timestamp=2024-07-19 23:47:05.0).
+2024-07-19 23:47:18,265 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:18,304 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user2 to the server.
+2024-07-19 23:47:18,305 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:18,321 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:39,472 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:39,513 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:47:39,530 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=45, userId=2, content=[user2]: , timestamp=2024-07-19 23:47:39.0).
+2024-07-19 23:47:51,766 INFO org.mathedwin.softdev.server.ClientHandler: user2 has been disconnected.
+2024-07-19 23:47:53,704 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:47:53,705 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-19 23:47:53,705 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:48:02,142 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:48:02,162 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user7 to the server.
+2024-07-19 23:48:02,163 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:48:02,172 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:32,363 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:49:35,409 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:49:35,418 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:49:35,419 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:49:42,040 INFO org.mathedwin.softdev.server.ClientHandler: Client connection refused.
+2024-07-19 23:49:44,318 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:49:44,319 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-19 23:49:44,320 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:49:52,211 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:52,502 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user1 to the server.
+2024-07-19 23:49:52,502 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:52,531 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:57,103 INFO org.mathedwin.softdev.server.ClientHandler: Entrando si no es vacio
+2024-07-19 23:49:57,106 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:57,168 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:49:57,204 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=46, userId=1, content=[user1]: , timestamp=2024-07-19 23:49:57.0).
+2024-07-19 23:50:36,614 INFO org.mathedwin.softdev.server.ClientHandler: user1 has been disconnected.
+2024-07-19 23:52:32,272 INFO org.mathedwin.softdev.server.ChatServer: The server has been started on the port: 12345
+2024-07-19 23:52:37,313 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:52:37,344 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@37d4349f].
+2024-07-19 23:52:37,345 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:52:46,659 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:52:46,979 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user4 to the server.
+2024-07-19 23:52:46,979 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:52:46,997 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:52:51,515 INFO org.mathedwin.softdev.server.ClientHandler: Entrando si no es vacio
+2024-07-19 23:52:51,518 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:52:51,579 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:52:51,600 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=47, userId=4, content=[user4]: parece que ya, timestamp=2024-07-19 23:52:51.0).
+2024-07-19 23:53:03,907 INFO org.mathedwin.softdev.server.ClientHandler: Entrando si no es vacio
+2024-07-19 23:53:03,909 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:53:03,938 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:53:03,950 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=48, userId=4, content=[user4]: vuala, si funciona, timestamp=2024-07-19 23:53:03.0).
+2024-07-19 23:53:10,296 INFO org.mathedwin.softdev.server.ClientHandler: user4 has been disconnected.
+2024-07-19 23:53:20,649 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:53:20,650 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@36916eb0].
+2024-07-19 23:53:20,652 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:53:33,981 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:53:34,023 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user9 to the server.
+2024-07-19 23:53:34,023 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:53:34,039 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:53:50,222 INFO org.mathedwin.softdev.server.ClientHandler: user9 has been disconnected.
+2024-07-19 23:55:07,169 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:55:07,170 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@437da279].
+2024-07-19 23:55:07,170 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:55:36,418 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:55:36,456 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user4 to the server.
+2024-07-19 23:55:36,457 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:55:36,485 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:55:42,647 INFO org.mathedwin.softdev.server.ChatServer: The connection to a client has been accepted.
+2024-07-19 23:55:42,648 INFO org.mathedwin.softdev.server.ChatServer: A customer has been added to the customer list: [org.mathedwin.softdev.server.ClientHandler@437da279, org.mathedwin.softdev.server.ClientHandler@1e1a0406].
+2024-07-19 23:55:42,650 INFO org.mathedwin.softdev.server.ChatServer: A new thread has been started for a customer.
+2024-07-19 23:55:53,920 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:55:53,956 INFO org.mathedwin.softdev.server.ClientHandler: Has entered user5 to the server.
+2024-07-19 23:55:53,957 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:55:53,975 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:59:22,855 INFO org.mathedwin.softdev.server.ClientHandler: Entrando si no es vacio
+2024-07-19 23:59:22,857 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:59:22,880 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:59:22,889 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=49, userId=5, content=[user5]: tengo fe, timestamp=2024-07-19 23:59:22.0).
+2024-07-19 23:59:30,199 INFO org.mathedwin.softdev.server.ClientHandler: Entrando si no es vacio
+2024-07-19 23:59:30,201 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:59:30,255 INFO org.mathedwin.softdev.database.DBConfig: Properties successfully loaded!
+2024-07-19 23:59:30,268 INFO org.mathedwin.softdev.service.MessageService: The message has been saved in the database: Message(id=50, userId=4, content=[user4]: yo tambien, timestamp=2024-07-19 23:59:30.0).
+2024-07-19 23:59:35,375 INFO org.mathedwin.softdev.server.ClientHandler: user4 has been disconnected.
+2024-07-19 23:59:41,359 INFO org.mathedwin.softdev.server.ClientHandler: user5 has been disconnected.

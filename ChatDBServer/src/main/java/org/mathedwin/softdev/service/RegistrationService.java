@@ -5,8 +5,14 @@ import org.apache.logging.log4j.Logger;
 import org.mathedwin.softdev.exceptions.DatabaseException;
 import org.mathedwin.softdev.model.User;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+
+import static org.mathedwin.softdev.server.PromptServer.clearScreen;
+import static org.mathedwin.softdev.utils.UserUtils.validateUsername;
 
 public class RegistrationService {
 
@@ -32,5 +38,28 @@ public class RegistrationService {
         }
 
         return future.get();
+    }
+
+    public String enterUsername(PrintWriter out, BufferedReader in) throws IOException {
+        String username;
+        while (true) {
+            out.print("Enter your username: ");
+            out.flush();
+            username = in.readLine();
+            try {
+                validateUsername(username);
+            } catch (IllegalArgumentException exception) {
+                LOGGER.info(exception.getMessage());
+                out.println(exception.getMessage());
+                out.print("Press ENTER to continue...");
+                out.flush();
+                in.readLine();
+                clearScreen(out);
+                continue;
+            }
+            clearScreen(out);
+            break;
+        }
+        return username;
     }
 }

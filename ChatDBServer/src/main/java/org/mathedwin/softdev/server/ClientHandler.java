@@ -10,7 +10,6 @@ import org.mathedwin.softdev.service.UserService;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
@@ -22,7 +21,6 @@ public class ClientHandler implements Runnable {
     private final Socket clientSocket;
     private PrintWriter out;
     private BufferedReader in;
-    private Console console;
     private String username;
     private Boolean isUserRegistered = false;
     //    private static final String CLEAR_CHARACTER = "\033[H\033[2J";
@@ -43,7 +41,8 @@ public class ClientHandler implements Runnable {
 
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            console = System.console();
+
+            // TODO: Mover metodos de instancia publicos de LoginService y RegistrationService a LoginUtils y RegistrationUtils y hacerlos estaticos
 
             welcome(out, in);
             int optionScreen;
@@ -51,14 +50,8 @@ public class ClientHandler implements Runnable {
                 optionScreen = startScreen(out, in);
                 // Login
                 if (optionScreen == 1) {
-                    out.print("Enter your username: ");
-                    out.flush();
-                    username = in.readLine();
-                    clearScreen(out);
-                    out.print("Enter your password: ");
-                    out.flush();
-                    String password = in.readLine();
-                    clearScreen(out);
+                    username = login.enterUsername(out, in);
+                    String password = login.enterPassword(out, in);
                     isUserRegistered = login.checkUser(username, password);
 
                     if (isUserRegistered) {
@@ -75,10 +68,13 @@ public class ClientHandler implements Runnable {
                             if (message.equalsIgnoreCase(EXIT_WORD)) {
                                 break;
                             }
-                            message = String.format("[%s]: %s", username, message);
-                            ChatServer.broadcastMessage(message, this);
-                            Message messageToBeSaved = getMessage(message, user.orElseThrow());
-                            ChatServer.saveMessage(messageToBeSaved);
+                            if (!message.isEmpty()) {
+                                LOGGER.info("Entrando si no es vacio");
+                                message = String.format("[%s]: %s", username, message);
+                                ChatServer.broadcastMessage(message, this);
+                                Message messageToBeSaved = getMessage(message, user.orElseThrow());
+                                ChatServer.saveMessage(messageToBeSaved);
+                            }
                         }
                     } else {
                         LOGGER.info("Incorrect username or password.");
@@ -92,10 +88,7 @@ public class ClientHandler implements Runnable {
                 if (optionScreen == 2) {
                     User user = new User();
                     boolean isSuccessfulRegistration;
-                    out.print("Enter your username: ");
-                    out.flush();
-                    user.setUsername(in.readLine());
-                    clearScreen(out);
+                    user.setUsername(registrationService.enterUsername(out, in));
                     out.print("Enter your password: ");
                     out.flush();
                     user.setPassword(in.readLine());
